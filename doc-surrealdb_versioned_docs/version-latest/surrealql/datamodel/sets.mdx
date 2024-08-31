@@ -40,9 +40,5 @@ A maximum number of items can be specified for a set.
 DEFINE FIELD employees ON TABLE team TYPE set<record<employee>, 5>;
 CREATE team:my_team SET employees = [employee:one, employee:two, employee:three, employee:four, employee:five];
 UPDATE team:my_team SET employees += employee:one;
-```
-
-```surql
-UPDATE team:my_team SET employees += employee:one;
 UPDATE team:my_team SET employees += employee:doesnt_belong;
 ```
